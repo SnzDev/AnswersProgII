@@ -10,7 +10,7 @@ public class AulaProgramacao {
     
     public static void main(String[] args) {
    
-        q9();
+        q18();
     }
     static void q1(){
         
@@ -124,5 +124,91 @@ public class AulaProgramacao {
         
         int a = 10;
         int b = 20;
+        int temp;
+        System.out.println("(1)Variável A: " + a);
+        System.out.println("(1)Variável B: " + b);
+        
+        temp=a;
+        a=b;
+        b=temp;
+        
+        System.out.println("\n(2)Variável A: " + a);
+        System.out.println("(2)Variável B: " + b);
+        
+    }
+    static void q14(){
+        
+        System.out.println("Digite Um Valor: ");
+        int valor = sc.nextInt();
+        
+        System.out.println("Seu Sucessor: " + (valor+1));
+        System.out.println("Seu Antecessor: " + (valor-1));
+        
+    }
+    static void q15(){
+    
+        System.out.println("Digite a Base: ");
+        int base = sc.nextInt();
+        
+        System.out.println("Digite a Altura: ");
+        int altura = sc.nextInt();
+        
+        int area = base * altura;
+        System.out.println("A Área do Retângulo é: " + area);
+    }
+    static void q16(){
+        System.out.println("Quantos Anos: ");
+        int anos = sc.nextInt();
+        
+        System.out.println("Quantos Meses: ");
+        int meses = sc.nextInt();
+        
+        System.out.println("Quantos dias: ");
+        int dias = sc.nextInt();
+        
+        int diasFinal = (anos * 365) + (meses * 30) + dias;
+        System.out.println("Quantidade Total em Dias: " + diasFinal);
+    }
+    static void q17(){
+    
+        System.out.println("Total de Eleitores: ");
+        int totalEleitores = sc.nextInt();
+        
+        System.out.println("Votos em Branco: ");
+        int votosEmBranco = sc.nextInt();
+        
+        System.out.println("Votos Nulos: ");
+        int votosNulos = sc.nextInt();
+        
+        System.out.println("Votos Válidos: ");
+        int votosValidos = sc.nextInt();
+        
+        float brancoPercentagem     = (totalEleitores * votosEmBranco)/100;
+        float nulosPercentagem      = (totalEleitores * votosNulos)/100;
+        float validosPercentagem    = (totalEleitores * votosValidos)/100;
+        
+        System.out.println("\nPercentagem Votos em Branco: " + brancoPercentagem + "%");
+        System.out.println("Percentagem Votos Nulos: " + nulosPercentagem + "%");
+        System.out.println("Percentagem Votos Válidos: " + validosPercentagem + "%");
+        
+    }
+    static void q18(){
+    
+        System.out.println("Digite o Salário Atual: ");
+        double salarioAtual = sc.nextDouble();
+        
+        System.out.println("Digite o Reajuste(%): ");
+        float reajuste = sc.nextFloat();
+        
+        double salarioFinal = salarioAtual + (salarioAtual*(reajuste/100));
+        System.out.println("Salário Final Com Reajuste: " + salarioFinal);
+    }
+    static void q19(){
+        
+        System.out.println("Digite o Custo de Fábrica: ");
+        double custoFabrica = sc.nextDouble();
+        
+        double valorFinal = (custoFabrica+(custoFabrica*0.45)) + ((custoFabrica+(custoFabrica*0.45))*0.28);
+        System.out.println("Valor Final: " + valorFinal);
     }
 }
