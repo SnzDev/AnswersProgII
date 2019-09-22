@@ -315,7 +315,7 @@ public class Respostas {
         }
         System.out.println("Salário Final: " + salarioFinal);
     }
-    static void q30(){
+    static void q31(){
         System.out.println("Digite o Salário Fixo: ");
         double salarioFixo = sc.nextDouble();
         
@@ -331,5 +331,471 @@ public class Respostas {
         
         System.out.println("Salário Final: " + salarioFinal);
     }
-    
+    static void q32(){
+        System.out.println("Digite o Número da Conta: ");
+        String numeroConta = sc.nextLine();
+        
+        System.out.println("Digite o Saldo: ");
+        double saldo = sc.nextDouble();
+        
+        System.out.println("Digite o Debito: ");
+        double debito = sc.nextDouble();
+        
+        System.out.println("Digite o Crédito: ");
+        double credito = sc.nextDouble();
+        
+        double saldoAtual = saldo - debito + credito;
+        System.out.println("Saldo Atual: " + saldoAtual);
+        
+        if(saldoAtual>=0){
+            System.out.println("Saldo Positivo!");
+        }else{
+            System.out.println("Saldo Negativo!");
+        }
+    }
+    static void q33(){
+        System.out.println("Quantidade Atual em Estoque: ");
+        int qtdAtual = sc.nextInt();
+        
+        System.out.println("Quantidade Maxima em Estoque: ");
+        int qtdMaxima = sc.nextInt();
+        
+        System.out.println("Quantidade Mínima em Estoque: ");
+        int qtdMinima = sc.nextInt();
+        
+        float qtdMedia = (qtdMaxima + qtdMinima)/2;
+        
+        System.out.println((qtdAtual>qtdMedia)?"Não Efetuar Compra":"Efetuar Compra");
+    }
+    static void q34(){
+        System.out.println("Digite um Valor: ");
+        int valor = sc.nextInt();
+        
+        if(valor>0){
+            System.out.println("Valor Positivo!");
+        }else if(valor<0){
+            System.out.println("Valor Negativo!");
+        }else{
+            System.out.println("Valor Zero!");
+        } 
+    }
+    static void q35(){
+        System.out.println("Digite o Primeiro Valor: ");
+        int primeiroValor = sc.nextInt();
+        
+        System.out.println("Digite o Segundo Valor: ");
+        int segundoValor = sc.nextInt();
+        
+        System.out.println("Digite o Terceiro Valor: ");
+        int terceiroValor = sc.nextInt();
+        
+        int maior;
+                
+        if((primeiroValor>segundoValor) && (primeiroValor>terceiroValor)){
+            maior = primeiroValor;
+        }else if((segundoValor>primeiroValor) && (segundoValor>terceiroValor)){
+            maior = segundoValor;
+        }else{
+            maior = terceiroValor;
+        }
+        System.out.println("Maior Valor: " + maior);
+    }
+    static void q36(){
+        System.out.println("Digite o Primeiro Valor: ");
+        int primeiroValor = sc.nextInt();
+        
+        System.out.println("Digite o Segundo Valor: ");
+        int segundoValor = sc.nextInt();
+        
+        System.out.println("Digite o Terceiro Valor: ");
+        int terceiroValor = sc.nextInt();
+        
+        int primeiroMaior,segundoMaior;
+        
+        if((primeiroValor>segundoValor) && (primeiroValor>terceiroValor)){
+            primeiroMaior = primeiroValor;
+            
+            if(segundoValor>terceiroValor){
+                segundoMaior = segundoValor;
+            }else{
+                segundoMaior = terceiroValor;
+            }
+        }else if((segundoValor>primeiroValor) && (segundoValor>terceiroValor)){
+            primeiroMaior = segundoValor;
+            
+            if(primeiroValor>terceiroValor){
+                segundoMaior = primeiroValor;
+            }else{
+                segundoMaior = terceiroValor;
+            }
+        }else{
+            primeiroMaior = terceiroValor;
+            
+            if(segundoValor>primeiroValor){
+                segundoMaior = segundoValor;
+            }else{
+                segundoMaior = primeiroValor;
+            }
+        }
+        
+        int somaMaiores = primeiroMaior + segundoMaior;
+        System.out.println("A Soma dos 2 Maiores: " + somaMaiores);
+        
+    }
+    static void q37(){
+        System.out.println("Digite o Primeiro Valor: ");
+        int primeiroValor = sc.nextInt();
+        
+        System.out.println("Digite o Segundo Valor: ");
+        int segundoValor = sc.nextInt();
+        
+        System.out.println("Digite o Terceiro Valor: ");
+        int terceiroValor = sc.nextInt();
+        
+        int primeiroMaior,segundoMaior,terceiroMaior;
+        
+        if((primeiroValor>segundoValor) && (primeiroValor>terceiroValor)){
+            primeiroMaior = primeiroValor;
+            
+            if(segundoValor>terceiroValor){
+                segundoMaior = segundoValor;
+                terceiroMaior = terceiroValor;
+            }else{
+                segundoMaior = terceiroValor;
+                terceiroMaior = segundoValor;
+            }
+        }else if((segundoValor>primeiroValor) && (segundoValor>terceiroValor)){
+            primeiroMaior = segundoValor;
+            
+            if(primeiroValor>terceiroValor){
+                segundoMaior = primeiroValor;
+                terceiroMaior = terceiroValor;
+            }else{
+                segundoMaior = terceiroValor;
+                terceiroMaior = primeiroValor;
+            }
+        }else{
+            primeiroMaior = terceiroValor;
+            
+            if(segundoValor>primeiroValor){
+                segundoMaior = segundoValor;
+                terceiroMaior = primeiroValor;
+            }else{
+                segundoMaior = primeiroValor;
+                terceiroMaior = segundoValor;
+            }
+        }
+        
+        System.out.println("Em Ordem Crescente: " + terceiroMaior + ", " + segundoMaior + ", " + primeiroMaior);
+    }
+    static void q38(){
+        System.out.println("Digite o Primeiro Valor: ");
+        int primeiroValor = sc.nextInt();
+        
+        System.out.println("Digite o Segundo Valor: ");
+        int segundoValor = sc.nextInt();
+        
+        System.out.println("Digite o Terceiro Valor: ");
+        int terceiroValor = sc.nextInt();
+        
+        if(primeiroValor<(segundoValor+terceiroValor) &&
+           segundoValor<(primeiroValor+terceiroValor) &&
+           terceiroValor<(segundoValor+terceiroValor)){
+            System.out.println("Pode Formar um Triângulo!");
+        }else{
+            System.out.println("Não Pode Formar um Triângulo!");
+        }
+    }
+    static void q39(){
+        System.out.println("Digite o Nome do Primeiro Time: ");
+        String primeiroTime = sc.nextLine();
+        
+        System.out.println("Digite o Nome do Segundo Time: ");
+        String segundoTime = sc.nextLine();
+        
+        System.out.println("Quantos Gols o " + primeiroTime + " Marcou: ");
+        int primeiroGols = sc.nextInt();
+        
+        System.out.println("Quantos Gols o " + segundoTime + " Marcou: ");
+        int segundoGols = sc.nextInt();
+        
+        if(primeiroGols>segundoGols){
+            System.out.println(primeiroTime + " Venceu de " + primeiroGols + " X " + segundoGols);
+        }else if(segundoGols>primeiroGols){
+            System.out.println(segundoTime + " Venceu de " + segundoGols + " X " + primeiroGols);
+        }else{
+            System.out.println("EMPATE!");
+        }   
+    }
+    static void q40(){
+        System.out.println("Digite o Primeiro Valor: ");
+        int primeiroValor = sc.nextInt();
+        
+        System.out.println("Digite o Segundo Valor: ");
+        int segundoValor = sc.nextInt();
+        
+        if(primeiroValor>segundoValor){
+            System.out.println("Primeiro é maior");
+        }else if(segundoValor>primeiroValor){
+            System.out.println("Segundo é maior");
+        }else{
+            System.out.println("Números iguais");
+        }
+    }
+    static void q42(){
+        System.out.println("Digite Quantos Litros: ");
+        int qtdLitros = sc.nextInt();
+        
+        System.out.println("Selecione: A - álcool,G - gasolina)");
+        String opcao = sc.next();
+        
+        switch (opcao) {
+            case "A":
+                {
+                    double precoAlcool,valorTotal;
+                    if(qtdLitros>20){
+                        precoAlcool =  2.9 - (2.9 * 0.05);
+                    }else{
+                        precoAlcool =  2.9 - (2.9 * 0.03);
+                    }       valorTotal =  qtdLitros*precoAlcool;
+                    System.out.println("Valor Total: " + valorTotal);
+                    break;
+                }
+            case "G":
+            {
+                double precoGasolina,valorTotal;
+                if(qtdLitros>20){
+                    precoGasolina =  3.30 - (3.30 * 0.06);
+                }else{
+                    precoGasolina =  3.30 - (3.30 * 0.04);
+                }       valorTotal =  qtdLitros*precoGasolina;
+                System.out.println("Valor Total: " + valorTotal);
+                    break;
+                }
+            default:
+                System.out.println("Opção Incorreta!");
+                break;
+        }
+    }
+    static void q43(){
+        
+        int maisVelho,maisNovo;
+        int maisVelha,maisNova;
+        
+        System.out.println("Digite a Idade do Primeiro Homem: ");
+        int iPrimeiroHomem = sc.nextInt();
+        
+        System.out.println("Digite a Idade do Segundo Homem: ");
+        int iSegundoHomem = sc.nextInt();
+        
+        System.out.println("Digite a Idade da Primeira Mulher: ");
+        int iPrimeiraMulher = sc.nextInt();
+        
+        System.out.println("Digite a Idade da Primeira Mulher: ");
+        int iSegundaMulher = sc.nextInt();
+        
+        if(iPrimeiroHomem>iSegundoHomem){
+            maisVelho = iPrimeiroHomem;
+            maisNovo = iSegundoHomem;
+        }else{
+            maisVelho = iSegundoHomem;
+            maisNovo = iPrimeiroHomem;            
+        }
+        
+        if(iPrimeiraMulher>iSegundaMulher){
+            maisVelha = iPrimeiraMulher;
+            maisNova = iSegundaMulher;
+        }else{
+            maisVelha = iSegundaMulher;
+            maisNova = iPrimeiraMulher;
+        }
+        System.out.println("Soma: " + (maisVelho + maisNova));
+        System.out.println("Produto: " + (maisNovo * maisVelha));
+    }
+    static void q44(){
+        double precoTotal;
+        double precoMorango,precoMaca;
+        System.out.println("Quantos Morangos(Kg): ");
+        int qtdMorangos = sc.nextInt();
+        
+        System.out.println("Quantas Maçãs(Kg): ");
+        int qtdMacas = sc.nextInt();
+        
+        precoMorango = (qtdMorangos>5)?(qtdMorangos*2.20):(qtdMorangos*2.50);
+        precoMaca = (qtdMacas>5)?(qtdMacas*1.50):(qtdMacas*1.80);
+        
+        if((qtdMorangos + qtdMacas)>8 && (precoMorango + precoMaca)>25){
+            precoTotal = (precoMorango + precoMaca) - ((precoMorango + precoMaca)*0.10);
+        }else{
+            precoTotal = precoMorango + precoMaca;
+        }
+        
+        System.out.println("Preço Total: " + precoTotal);        
+    }
+    static void q45(){
+        System.out.println("Digite o Código de Usuário: ");
+        String login = sc.next();
+        
+        if(login.equals("1234")){
+            System.out.println("Digite a Senha do Usuário: ");
+            String senha = sc.next();
+            
+            if(senha.equals("9999")){
+                System.out.println("Acesso Permitido!");
+            }else{
+                System.out.println("Senha Incorreta!");
+            }
+            
+        }else{
+            System.out.println("Usuário Inválido!");
+        }
+        
+    }
+    static void q47(){
+        double desconto;
+        
+        System.out.println("Digite o Nome do Produto: ");
+        String nomeProduto = sc.next();
+        
+        System.out.println("Digite a Quantidade Adquirida: ");
+        int qtdComprada = sc.nextInt();
+        
+        System.out.println("Digite o Preço Unitário: ");
+        double preco = sc.nextDouble();
+        
+        double precoTotal = qtdComprada * preco;
+        
+        if(qtdComprada<=5){
+            desconto = 0.02;
+        }else if(qtdComprada>5 && qtdComprada<=10){
+            desconto = 0.03;
+        }else{
+            desconto = 0.05;
+        }
+        double valorFinal = precoTotal -(precoTotal*desconto);
+        
+        System.out.println("Preço Total: " + precoTotal);
+        System.out.println("Preço Com Desconto: " + valorFinal);
+    }
+    static void q48(){
+        System.out.println("Digite o Código do Empregado: ");
+        String codEmpregado = sc.next();
+        
+        System.out.println("Digite o Ano de Nascimento: ");
+        int anoNascimento = sc.nextInt();
+        
+        System.out.println("Digite o Ano de Ingresso Na Empresa: ");
+        int anoIngresso = sc.nextInt();
+        
+        int idade = 2019 - anoNascimento;
+        int tempoTrabalho = 2019 - anoIngresso;
+        
+        if(idade>=65 || tempoTrabalho>=30 || (idade>=60 && tempoTrabalho>=25)){
+            System.out.println("Requerer Aposentadoria!");
+        }else{
+            System.out.println("Não Requerer!");
+        }
+    }
+    static void q50(){
+        System.out.println("Digite o Primeiro Valor: ");
+        float primeiroValor = sc.nextInt();
+  
+        float segundoValor;
+        
+        do{
+            System.out.println("Digite o Segundo Valor Diferente de 0: ");
+            segundoValor = sc.nextInt();
+        }while(segundoValor==0);
+        
+        float divisao = primeiroValor / segundoValor;
+        System.out.println("Divisão dos Valores: " + divisao);
+    }
+    static void q51(){
+        System.out.println("Digite o Primeiro Valor: ");
+        float primeiroValor = sc.nextInt();
+        
+        System.out.println("Digite o Segundo Valor: ");
+        float segundoValor = sc.nextInt();
+        
+        while(segundoValor==0){
+            System.out.println("Digite o Segundo Valor Diferente de 0: ");
+            segundoValor = sc.nextInt();
+        }
+        float divisao = primeiroValor / segundoValor;
+        System.out.println("Divisão dos Valores: " + divisao);
+    }
+    static void q53(){
+        System.out.println("Digite Quantos Litros: ");
+        int qtdLitros = sc.nextInt();
+        
+        System.out.println("Selecione: A - álcool,G - gasolina)");
+        String opcao = sc.next();
+        
+        switch (opcao) {
+            case "A":
+                {
+                    double precoAlcool,valorTotal;
+                    if(qtdLitros>20){
+                        precoAlcool =  2.9 - (2.9 * 0.05);
+                    }else{
+                        precoAlcool =  2.9 - (2.9 * 0.03);
+                    }       valorTotal =  qtdLitros*precoAlcool;
+                    System.out.println("Valor Total: " + valorTotal);
+                    break;
+                }
+            case "G":
+            {
+                double precoGasolina,valorTotal;
+                if(qtdLitros>20){
+                    precoGasolina =  3.30 - (3.30 * 0.06);
+                }else{
+                    precoGasolina =  3.30 - (3.30 * 0.04);
+                }       valorTotal =  qtdLitros*precoGasolina;
+                System.out.println("Valor Total: " + valorTotal);
+                    break;
+                }
+            default:
+                System.out.println("VALOR INVÁLIDO!");
+                break;
+        }
+    }
+    static void q54(){
+        float primeiraNota,segundaNota;
+        
+        do{
+            System.out.println("Digite a Primeira Nota(0 á 10): ");
+            primeiraNota = sc.nextFloat();
+        }while(primeiraNota<0 || primeiraNota>10);
+        
+        do{
+            System.out.println("Digite a Segunda Nota(0 á 10): ");
+             segundaNota = sc.nextFloat();
+        }while(segundaNota<0 || segundaNota>10);
+        
+        float media = (primeiraNota + segundaNota)/2;
+        System.out.println("Média: " + media);
+    }
+    static void q55(){
+        String opcao;
+        do{
+            System.out.println("Digite o Código de Usuário: ");
+            String login = sc.next();
+        
+            if(login.equals("1234")){
+                System.out.println("Digite a Senha do Usuário: ");
+                String senha = sc.next();
+            
+                if(senha.equals("9999")){
+                    System.out.println("Acesso Permitido!");
+                }else{
+                    System.out.println("Senha Incorreta!");
+                }
+            
+            }else{
+                System.out.println("Usuário Inválido!");
+            }
+            System.out.println("NOVO CÁLCULO (S/N)?");
+            opcao = sc.next();
+        }while(opcao.equals("S") || opcao.equals("s"));
+    }
 }

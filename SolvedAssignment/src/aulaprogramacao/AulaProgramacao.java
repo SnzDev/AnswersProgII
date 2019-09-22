@@ -5,6 +5,6 @@ package aulaprogramacao;
 public class AulaProgramacao {
     
     public static void main(String[] args) {
-        Respostas.q29();
+        Respostas.q54();
     }
 }
